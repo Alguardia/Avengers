@@ -25,7 +25,7 @@
             <div class="dropdown">
                 <span class="user-name">Alexandre</span>
                 <div class="dropdown-content">
-                    <a href="pages/profil.php">Profil</a>
+                    <a href="pages/profile.php">Profil</a>
                     <a href="pages/logout.php">Logout</a>
                 </div>
             </div>

@@ -13,7 +13,7 @@
         <div class="nav-content">
             <div class="logo">A.S</div>
             <div class="nav-links">
-                <a href="index.php">Accueil</a>
+                <a href="../index.php">Accueil</a>
                 <a href="about.php">À propos</a>
                 <a href="contact.php">Contacte</a>
                 <a href="login.php" class="active">Login</a>
