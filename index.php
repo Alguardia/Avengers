@@ -5,20 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anthony Stark - Développeur Fullstack</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<?php
+    require_once(__DIR__ . "/security/sessions.php");
+?>
 <nav>
-        <div class="nav-content">
-            <div class="logo">A.S</div>
-            <div class="nav-links">
-                <a href="index.php" class="active">Accueil</a>
-                <a href="about.php">À propos</a>
-                <a href="contact.php">Contact</a>
-                <a href="login.php">Login</a>
+    <div class="nav-content">
+        <div class="logo">A.S</div>
+        <div class="nav-links">
+            <a href="index.php">Accueil</a>
+            <a href="pages/about.php">À propos</a>
+            <a href="pages/contact.php">Contacte</a>
+        </div>
+        <div class="nav-img">
+            <img src="images/user.png" alt="User Icon" class="user-icon">
+            <div class="dropdown">
+                <span class="user-name">Alexandre</span>
+                <div class="dropdown-content">
+                    <a href="pages/profil.php">Profil</a>
+                    <a href="pages/logout.php">Logout</a>
+                </div>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <main>
         <section class="hero">

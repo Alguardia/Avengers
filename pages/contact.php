@@ -1,6 +1,7 @@
 <?php
-    require_once(__DIR__."\config\mysql.php");
-    require_once(__DIR__."\databaseconnect.php");
+    require_once(__DIR__."/../config/mysql.php");
+    require_once(__DIR__."/../config/databaseconnect.php");
+    require_once(__DIR__ . "/../security/sessions.php");
 
     $contactStatement = $mysqlClient->prepare("SELECT * from contact_info");
     $contactStatement->execute();
@@ -21,18 +22,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Anthony Stark</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
 </head>
 <body>
-    
+
 <nav>
         <div class="nav-content">
             <div class="logo">A.S</div>
             <div class="nav-links">
-                <a href="index.php" >Accueil</a>
+                <a href="../index.php" >Accueil</a>
                 <a href="about.php">À propos</a>
-                <a href="contact.php"class="active">Contact</a>
+                <a href="contact.php"class="active">Contacte</a>
                 <a href="login.php">Login</a>
+
             </div>
         </div>
     </nav>
@@ -66,7 +69,7 @@
                     <li>Téléphone: <?php echo $telephone; ?></li>
                     <li>Localisation: <?php echo $localisation; ?></li>
                 </div>
-                
+
             </div>
             <?php
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -74,7 +77,7 @@
                     $post_email = $_POST['email'];
                     $post_message = $_POST['message'];
 
-                    require_once(__DIR__.'\config\mysql.php');
+                    require_once(__DIR__.'/../config/mysql.php');
                     $connexion = mysqli_connect(MYSQL_HOST, MYSQL_USERNAME, MYSQL_PASSWORD, MYSQL_DB_NAME);
 
                     $sql = "INSERT INTO messages (`nom`, `email` , `message`) VALUES ('$post_nom', '$post_email', '$post_message')";
@@ -95,5 +98,3 @@
     </footer>
 </body>
 </html>
-
-

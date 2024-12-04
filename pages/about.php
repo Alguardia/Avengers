@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos - Anthony Stark</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
 </head>
 <body>
     <?php
-    require_once(__DIR__."\config\mysql.php");
-    require_once(__DIR__."\databaseconnect.php");
+    require_once(__DIR__."/../config/mysql.php");
+    require_once(__DIR__."/../config/databaseconnect.php");
 
     $aboutStatement = $mysqlClient->prepare("SELECT * FROM about");
     $aboutStatement->execute();
@@ -25,9 +26,9 @@
         <div class="nav-content">
             <div class="logo">A.S</div>
             <div class="nav-links">
-                <a href="index.php" >Accueil</a>
+                <a href="../index.php" >Accueil</a>
                 <a href="about.php" class="active">À propos</a>
-                <a href="contact.php">Contact</a>
+                <a href="contact.php">Contacte</a>
                 <a href="login.php">Login</a>
             </div>
         </div>

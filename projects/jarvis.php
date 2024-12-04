@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>J.A.R.V.I.S - Anthony Stark</title>
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="../css/style.css">
+    
 </head>
 <body>
     <?php
-    require_once(__DIR__ . '\..\config\mysql.php');
-    require_once(__DIR__ . '\..\databaseconnect.php');
+        require_once(__DIR__."/../config/mysql.php");
+        require_once(__DIR__."/../config/databaseconnect.php");
     $jarvisStatement = $mysqlClient->prepare('SELECT * FROM projets WHERE projet_name="J.A.R.V.I.S" ');
     $jarvisStatement->execute();
     $jarvis = $jarvisStatement->fetchAll();
@@ -24,9 +25,9 @@
             <div class="logo">A.S</div>
             <div class="nav-links">
                 <a href="../index.php" class="active">Accueil</a>
-                <a href="../about.php">À propos</a>
-                <a href="../contact.php">Contact</a>
-                <a href="../login.php">Login</a>
+                <a href="../pages/about.php">À propos</a>
+                <a href="../pages/contact.php">Contacte</a>
+                <a href="../pages/login.php">Login</a>
             </div>
         </div>
     </nav>

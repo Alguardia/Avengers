@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
 
@@ -14,7 +15,7 @@
             <div class="nav-links">
                 <a href="index.php">Accueil</a>
                 <a href="about.php">À propos</a>
-                <a href="contact.php">Contact</a>
+                <a href="contact.php">Contacte</a>
                 <a href="login.php" class="active">Login</a>
             </div>
         </div>
