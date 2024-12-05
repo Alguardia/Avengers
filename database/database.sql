@@ -30,7 +30,17 @@ CREATE TABLE IF NOT EXISTS `messages` (
     `id` INT AUTO_INCREMENT PRIMARY KEY,
     `nom` VARCHAR(30),
     `email` VARCHAR(50),
-    `message` TEXT
+    `message` TEXT,
+    `time` DATETIME DEFAULT CURRENT_TIMESTAMP
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `users` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `prenom` VARCHAR(30),
+    `nom` VARCHAR(30),
+    `username` VARCHAR(30),
+    `password` VARCHAR(30),
+    `admin` BOOLEAN
 );
 
 -- Removing Old Data
@@ -69,3 +79,6 @@ VALUES
 
 INSERT INTO contact_info (email, linkedin, github, telephone, localisation)
 VALUES ('anthony.stark@jarvis.com', '@anthonystark', '@Anthony-stark', '+33 07 38 68 59 85', 'Paris');
+
+INSERT INTO `users` (`prenom`,`nom`,`username`,`password`,`admin`)
+VALUES ('Bassem','Bama','root','root',true);

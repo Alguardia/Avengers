@@ -27,8 +27,8 @@
             <div class="nav-links">
                 <a href="../index.php" class="active">Accueil</a>
                 <a href="../pages/about.php">À propos</a>
-                <a href="../pages/contact.php">Contacte</a>
-                <a href="../pages/login.php">Login</a>
+                <a href="../pages/contact.php">Contact</a>
+                <a href="../pages/login.php">Connexion</a>
             </div>
         </div>
     </nav>
@@ -108,10 +108,18 @@ app.mount('#app');
             </section>
         </article>
     </main>
+    <?php
+    if (!isset($_SESSION['id'])) {
+        
+        $hidePage = true;  
+        echo "<footer class='fixeddd'> <p>© 2024 Anthony Stark. Tous droits réservés.</p> </footer>";
+    } else {
+        $hidePage = false;  
+        echo "<footer> <p>© 2024 Anthony Stark. Tous droits réservés.</p> </footer>";
+        
+    }
+?>
 
-    <footer>
-        <p>© 2024 Anthony Stark. Tous droits réservés.</p>
-    </footer>
 
 </body>
 </html>

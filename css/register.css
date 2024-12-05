@@ -1,15 +1,10 @@
 
-/***************************page register**********************************/ 
-
-
-
 section.register {
-    margin: 50px auto; 
+    margin: 5px auto; 
     border-radius: 10px;
     padding: 20px;
     max-width: 400px;
     max-height: 80%;
-    margin-top: 105px;
 
 
   }
@@ -75,7 +70,19 @@ section.register {
     background-color: #d4edda;
     color: #155724; 
     border-radius: 5px;
-    margin-top: 20px;
     text-align: center;
     font-size: 20px;
-}
+  }
+
+
+
+.error-messagered {
+
+  background-color: rgb(255, 148, 148);
+  color: rgb(255, 0, 0);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+  }
+  
